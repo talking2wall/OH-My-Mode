@@ -1,0 +1,50 @@
+﻿<Window x:Class="ModeManager.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModeManager"
+        mc:Ignorable="d"
+        Title="אודות" Height="150" Background="Transparent" AllowsTransparency="True" Width="600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" HorizontalContentAlignment="Right">
+
+    <Grid>
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="Black"/>
+                <GradientStop Color="Transparent" Offset="1"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+
+        <StackPanel MouseDown="StackPanel_MouseDown">
+            <Image Source="Assets/Images/about.png" Stretch="Fill" VerticalAlignment="Top" Margin="0,10,0,0"/>
+
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" Foreground="Firebrick" FontWeight="Heavy" Text="גרסה 0.1.1" Height="52" Width="300" FontSize="20" Margin="0,-5,0,0">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect>
+                <TextBlock.RenderTransform>
+                    <TranslateTransform x:Name="transTransform" X="0" Y="0"/>
+                </TextBlock.RenderTransform>
+                <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation From="-150" To="0" Duration="00:00:01"
+                                    Storyboard.TargetName="transTransform"
+                                    Storyboard.TargetProperty="Y">
+                                    <DoubleAnimation.EasingFunction>
+                                        <BounceEase Bounces="5" EasingMode="EaseOut"
+                                                Bounciness="2" />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+            </TextBlock>
+        </StackPanel>
+
+        <Button VerticalAlignment="Top" HorizontalAlignment="Right" Content="X" Background="Red" Foreground="Black" Click="Button_Click"/>
+
+    </Grid>
+</Window>

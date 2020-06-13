@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <NoWin32Manifest>true</NoWin32Manifest>
+    <Description>This program allows you to download and install cs 1.6 plugins directly to your ftp server.</Description>
+    <Copyright>JuSTaR</Copyright>
+    <StartupObject>ModeManager.App</StartupObject>
+    <PackageIcon>icons8_synchronize_48px.png</PackageIcon>
+    <AssemblyVersion>0.1.1.0</AssemblyVersion>
+    <FileVersion>0.1.1.0</FileVersion>
+    <Company>JuSTaR</Company>
+    <Authors>Oren</Authors>
+    <Version>0.1.1</Version>
+    <ApplicationIcon>Assets\Images\icons8_synchronize_48px.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="about.png" />
+    <None Remove="amxx_icon.png" />
+    <None Remove="icons8_chevron_left_48px.png" />
+    <None Remove="icons8_help_48px.png" />
+    <None Remove="icons8_search_26px.png" />
+    <None Remove="icons8_synchronize_48px.ico" />
+    <None Remove="PluginsList.txt" />
+    <None Remove="success.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentFTP" Version="32.4.3" />
+    <PackageReference Include="MaterialDesignThemes" Version="3.1.3" />
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\about.png" />
+    <Resource Include="Assets\Images\amxx_icon.png" />
+    <Resource Include="Assets\Images\icons8_chevron_left_48px.png" />
+    <EmbeddedResource Include="Assets\PluginsList.txt" />
+    <Resource Include="Assets\Images\icons8_help_48px.png" />
+    <Resource Include="Assets\Images\icons8_search_26px.png" />
+    <Resource Include="Assets\Images\icons8_synchronize_48px.ico" />
+    <Resource Include="Assets\Images\success.gif" />
+  </ItemGroup>
+</Project>

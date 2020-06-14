@@ -1,5 +1,5 @@
 # OH-My-Mode
-Tool for downloading and installing plugins for Counter Strike 1.6
+Tool for downloading and installing plugins for Counter Strike 1.6 Servers via ftp.
 
 ## Development Enviroment
 - **Program:** _Visual Studio 2019 Comunity Version_
